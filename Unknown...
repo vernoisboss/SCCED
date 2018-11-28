@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#box1 {
+  width: 100%;
+  position: relative;
+  float: left;
+ margin-bottom: 25px;
+}
+#image {
+  height: 175px;
+  width: 175px;
+  background-color: #70c1d7;
+  background-image: url("https://cdn4.iconfinder.com/data/icons/free-colorful-icons/360/google_docs.png");
+  border-radius: 50%;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: xx-large;
+    color: #70c1d7;
+    text-shadow: 2px 2px #333333;
+}
+</style>
+<body>
+<a href="https://docs.google.com/document/d/1lx65M8Z1iNJyA6nqE7K9sexS2fSmNknAfvJJi8cOZ24/edit?usp=sharing">
+<div id="box1" text align="center">
+  <div id="image"></div>
+  <div class="centered">Activity</div></div>
+<div id="box1" text align="center">
+    <a href="https://docs.google.com/document/d/1lx65M8Z1iNJyA6nqE7K9sexS2fSmNknAfvJJi8cOZ24/copy"><img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" alt="make your own copy in google" width="50" height="50"></a>
+  </div>
+  </body>
