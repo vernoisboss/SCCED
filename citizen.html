@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
+    <title>Citizen Science</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -14,6 +14,22 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.min.css" rel="stylesheet">
+
+    <style>
+      .map-container{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+      }
+      .map-container iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+    </style>
 
 </head>
 
@@ -28,7 +44,7 @@
 
               <!-- Brand -->
               <a class="navbar-brand waves-effect" href="index.html" target="_self">
-                  <strong class="blue-text">SCCEd</strong>
+                  <strong class="maroon-text">SCCEd</strong>
               </a>
 
               <!-- Collapse -->
@@ -54,7 +70,7 @@
                           <a class="nav-link waves-effect" href="citizen.html" target="_self">Citizen Science</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link waves-effect" href="#" target="_self">Wellbeing</a>
+                          <a class="nav-link waves-effect" href="wellbeing.html" target="_self">Wellbeing</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link waves-effect" href="#" target="_self">Air Monitoring</a>
@@ -96,13 +112,20 @@
         <!--Grid row-->
         <div class="row wow fadeIn">
 
-          <!--Grid column-->
+          <!--What is citizen science video-->
+          <div class="col-md-6 mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WW0ZHAeO0tU?start=95" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <!--Activites-->
           <div class="col-lg-6 col-md-12 px-4">
 
             <!--First row-->
             <div class="row">
               <div class="col-1 mr-3">
-                <i class="fa fa-link fa-2x indigo-text"></i>
+                <i class="fa fa-link fa-2x gold-text"></i>
               </div>
               <div class="col-10">
                 <h5 class="feature-title">Explore these Web Resource</h5>
@@ -116,96 +139,82 @@
             <!--Activity-->
             <div class="row">
               <div class="col-1 mr-3">
-                <i class="fa fa-book fa-2x blue-text"></i></a>
+                <i class="fa fa-book fa-2x maroon-text"></i></a>
               </div>
               <div class="col-10">
                 <h5 class="feature-title">Activity</h5>
+<<<<<<< HEAD
+                <p class="gold-text"><a href="https://docs.google.com/document/d/1lx65M8Z1iNJyA6nqE7K9sexS2fSmNknAfvJJi8cOZ24/edit">Open in New Window</a><p><a href="https://docs.google.com/document/d/1lx65M8Z1iNJyA6nqE7K9sexS2fSmNknAfvJJi8cOZ24/copy">"Copy to" Google drive</a></p>
+=======
                 <p class="grey-text"><a href="https://docs.google.com/document/d/1lx65M8Z1iNJyA6nqE7K9sexS2fSmNknAfvJJi8cOZ24/edit" target="_blank">Open in New Window</a><p><a href="https://docs.google.com/document/d/1lx65M8Z1iNJyA6nqE7K9sexS2fSmNknAfvJJi8cOZ24/copy" target="_blank">"Copy to" Google drive</a></p>
+>>>>>>> 3a27ac3795507c4156d9b19009768dfa8ccee928
                 </p>
               </div>
             </div>
-            <!--/Second row-->
-
-            <div style="height:30px"></div>
-
-            <!--Third row-->
-
-            <!--/Third row-->
-
           </div>
-          <!--/Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-6 col-md-12">
-
-            <p class="h5 text-center mb-4">2 min "Quick Vid" What is Citizen Science?</p>
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WW0ZHAeO0tU?start=95" allowfullscreen></iframe>
-            </div>
-          </div>
-          <!--/Grid column-->
-
         </div>
-        <!--/Grid row-->
+
 
       </section>
       <!--End Explore Section-->
-
       <!--Map & other Schools-->
       <!--Section: Main info-->
       <section class="mt-5 wow fadeIn">
-<h3 class="h3 text-center mb-5">Learn more about others working on the project</h3>
+       <h3 class="h3 text-center mb-5">Learn more about others working on the project</h3>
         <!--Grid row-->
         <div class="row">
 
-          <!--Grid column-->
-          <div class="col-md-6 mb-4">
+            <!-- Column header -->
+            <div class="col-md-6 mb-4">
+              <!-- Arc GIS Map -->
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="http://umn.maps.arcgis.com/apps/View/index.html?appid=27a25bc98f794f9faa2e4b0b3f0baf18" frameborder="0"
+                  style="border:0" allowfullscreen></iframe>
+              </div>
+            </div>
 
-            <a href= "http://arcg.is/OTCLi" target="_blank"><img src="img/map.jpg" class="img-fluid z-depth-1-half" alt=""></a>
+            <div class="col-md-6 mb-4">
 
-          </div>
+              <!-- Main heading -->
+              <h5 class="feature-title">S&CC Grant members are:</h5>
+              <!-- Sub Heading -->
+              <p>Students, teachers, professional researchers, scientists and engineers are some of the others working together on this project.</p>
+              <!-- Sub Heading -->
+              <h5 class="feature-title">Put more on the map!</h5>
+              <!-- CTA -->
+              <a target="_blank" href="https://survey123.arcgis.com/share/81cd62960219492b84821df3b351ce7c" class="btn btn-green btn-md">Add More!
+                <i class="fa fa-link ml-1"></i></a>
 
-        <!--Grid column-->
-          <div class="col-md-6 mb-4">
-
-            <!-- Main heading -->
-            <h5 class="feature-title">S&CC Grant members are:</h5>
-            <!-- Sub Heading -->
-            <p>Students, teachers, professional researchers, scientists and engineers are some of the others working together on this project.</p>
-            <!-- Sub Heading -->
-            <h5 class="feature-title">Put your group on the Map!</h5>
-            <!-- CTA -->
-            <a target="_blank" href="https://survey123.arcgis.com/share/81cd62960219492b84821df3b351ce7c" class="btn btn-grey btn-md">Sign Up!
-              <i class="fa fa-link ml-1"></i></a>
-
-          </div></div></section>
+            </div>
+         </div>
+         </section>
           <!--end section-->
 
           <!--section-->
           <section class="mt-5 wow fadeIn">
-          <h3 class="h3 text-center mb-5">Connect with experts and peers</h3>
+            <!-- Main heading -->
+          <h3 class="h3 text-center mb-5">Connect with others working with you!</h3>
             <!--Grid row-->
             <div class="row">
-          <!--Grid column-->
-          <div class="col-md-6 mb-4">
-            <!-- Main heading -->
+              <!--Grid column-->
+                 <div class="col-md-6 mb-4">
+                <!-- Column header -->
+                  <h5 class="feature-title">Learn more about researchers or ask a question using flip grid.</h5>
+                  <a href= "https://flipgrid.com/398077" target="_blank"><img src="img/flipgridcta.png" align="middle" height="200" width="200" alt="Picture of a qustion Mark with pictures of U of M S&CC grant researchers"></img></a>
+                </div>
 
-            <!-- CTA -->
-              <h5 class="feature-title">Ask a questions to a researcher using flip grid and connect with peers using the #hashtag SCCEd</h4>
-            </div>
-            <!--end Grid column-->
-          <div class="col-md-6 mb-4">
-            <a href="https://flipgrid.com/398077" target="_blank"><i class="fa fa-users fa-4x green-text"></i></a>
-            <i class="fa fa-twitter fa-4x blue-text"></i>
-            <i class="fa fa-instagram fa-4x grey-text"></i>
-            <!--end Grid column-->  <!--end Grid row-->
-        </div>
-      </section>
-      <!--pasted stuff above-->
+                <div class="col-md-6 mb-4">
+                  <h5 class="feature-title">Explore examples and share yours on using the hahtag #scced</h5>
+                  <a href="" target="_blank">
+                      <i class="fa fa-instagram fa-3x gold-text"></i>
+                  </a>
 
-
-
-    </div>
+                  <a href="" target="_blank">
+                      <i class="fa fa-twitter fa-3x maroon-text" ></i>
+                  </a>
+                </div>
+              </div>
+          </section>
   </main>
   <!--Main layout-->
 
