@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Vernon056-MPLS-1885</name>
+	<Style>
+		<ListStyle>
+			<listItemType>checkHideChildren</listItemType>
+			<bgColor>00ffffff</bgColor>
+			<maxSnippetLines>2</maxSnippetLines>
+		</ListStyle>
+	</Style>
+	<NetworkLink>
+		<Region>
+			<LatLonAltBox>
+				<north>44.99288091819513</north>
+				<south>44.97518735958635</south>
+				<east>-93.21983635282022</east>
+				<west>-93.25421180736568</west>
+				<minAltitude>0</minAltitude>
+				<maxAltitude>0</maxAltitude>
+			</LatLonAltBox>
+			<Lod>
+				<minLodPixels>128</minLodPixels>
+				<maxLodPixels>-1</maxLodPixels>
+				<minFadeExtent>0</minFadeExtent>
+				<maxFadeExtent>0</maxFadeExtent>
+			</Lod>
+		</Region>
+		<Link>
+			<href>http://mapwarper.net/maps/38188.kml?DBOX=-93.25421180736568,44.97518735958635,-93.21983635282022,44.99288091819513,1&amp;</href>
+			<viewRefreshMode>onRequest</viewRefreshMode>
+		</Link>
+	</NetworkLink>
+</Document>
+</kml>
