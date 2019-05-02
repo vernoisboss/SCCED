@@ -4,11 +4,13 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Travel Parallax</title>
+  <title>Food Systems</title>
   <link rel="stylesheet" href="css/parallax.css" media="screen">
   <link rel="shortcut icon" href="favicon.ico">
-
+<!-- Fonts icons -->
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- vertical menue -->
   <!-- FontAwesome -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -26,6 +28,9 @@
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 
+<!--carousel-->
+<link rel="stylesheet" type="text/css" href="css/xstyle.css">
+
 
   <!-- vertical Menue -->
     <link rel="stylesheet" href="css/bootstrap-vertical-menu.css">
@@ -33,233 +38,317 @@
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <script type="text/javascript">
 
-        // Load the Visualization API and the corechart package.
-        google.charts.load('current', {'packages':['corechart']});
+      // Google Charts Load options//
+              google.charts.load('current', {'packages':['corechart','bar']});
 
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.charts.setOnLoadCallback(drawChart);
 
-        // Callback that creates and populates a data table,
-        // instantiates the pie chart, passes in the data and
-        // draws it.
-        function drawChart() {
+              // Chart 1 //
 
-          // Create the data table.
-          var data = new google.visualization.DataTable();
-          data.addColumn('string', 'Topping');
-          data.addColumn('number', 'Slices');
-          data.addRows([
-            ['Mushrooms', 3],
-            ['Onions', 1],
-            ['Olives', 1],
-            ['Zucchini', 1],
-            ['Pepperoni', 2]
-          ]);
+                   google.charts.setOnLoadCallback(drawChart1);
 
-          // Set chart options
-          var options = {'title':'How Much Pizza I Ate Last Night',
-                         'width':400,
-                         'height':300,
-                         'backgroundColor': 'transparent'};
+                   function drawChart1() {
+                     var data = google.visualization.arrayToDataTable([
+                       ['Cities Resource Use', 'GHG Emmisions', 'Water Use', 'Land'],
+                       ['2014', 30, 80, 11],
 
-          // Instantiate and draw our chart, passing in some options.
-          var chart = new google.visualization.PieChart(document.getElementById('chart1_div'));
-          chart.draw(data, options);
-        }
+                     ]);
 
-// add another chart //
+                     var options = {
+                       chart: {
+                         title: 'Feeding Cities',
+                         subtitle: 'Foods role in Global Resource Use, percent%',
+                       },
+                       bars: 'horizontal', // Required for Material Bar Charts.
+                       hAxis: {
+                         format: 'decimal'
+                       },
+                       height: 200,
+                       width: 500,
+                       'backgroundColor': 'transparent',
+                       colors: ['#b94f74', '#0000FF', '#a37053']
+                     };
 
-google.charts.load('current', {
-       'packages': ['bar']
-     });
-     google.charts.setOnLoadCallback(drawChart);
+                     var chart = new google.charts.Bar(document.getElementById('chart_div1'));
 
-     function drawChart() {
-       var data = google.visualization.arrayToDataTable([
-         ['Cities Resource Use', 'GHG Emmisions', 'Water Use', 'Land'],
-         ['2014', 30, 80, 11],
+                     chart.draw(data, google.charts.Bar.convertOptions(options));
 
-       ]);
+                     var btns = document.getElementById('btn-group');
 
-       var options = {
-         chart: {
-           title: 'Feeding Cities',
-           subtitle: 'Foods role in Global Resource Use, percent%',
-         },
-         bars: 'horizontal', // Required for Material Bar Charts.
-         hAxis: {
-           format: 'decimal'
-         },
-         height: 200,
-         width: 500,
-         'backgroundColor': 'transparent',
-         colors: ['#b94f74', '#0000FF', '#a37053']
-       };
+                     btns.onclick = function(e) {
 
-       var chart = new google.charts.Bar(document.getElementById('chart2_div'));
+                       if (e.target.tagName === 'BUTTON') {
+                         options.hAxis.format = e.target.id === 'none' ? '' : e.target.id;
+                         chart.draw(data, google.charts.Bar.convertOptions(options));
+                       }
+                     }
+                   }
+      // Chart 2 //
+  google.charts.setOnLoadCallback(drawChart2);
 
-       chart.draw(data, google.charts.Bar.convertOptions(options));
+  function drawChart2() {
+    var data = google.visualization.arrayToDataTable([
+      ['Region', '1992', '2016'],
+      ['Sub Saharan Africa', 33.2, 23.2],
+      ['Caribbean',27.0, 19.8],
+      ['Southern Asia',23.9, 15.7],
+      ['Oceana', 15.7, 14.2],
+      ['Eastern Asia', 23.2, 9.6],
+      ['South-Eastern Asia', 30.6, 9.6],
+      ['Western-Asia',6.4 , 8.4],
+      ['Caucasus and Central Asia',14.5, 7],
+      ['Latin America', 13.5, 4],
+      ['Northern Africa', 4, 4],
+    ]);
 
-       var btns = document.getElementById('btn-group');
+    var options = {
+      chart: {
+        title: 'FAO The state of food insecurity in the world 2015',
+      },
+      bars: 'horizontal',
+      hAxis: {format: 'decimal'},
+      height: 400,
+      Width: 250,
+      'backgroundColor': 'transparent',
+      colors: ['#1b9e77', '#d95f02', '#7570b3']
+    };
 
-       btns.onclick = function(e) {
+    var chart = new google.charts.Bar(document.getElementById('chart_div2'));
 
-         if (e.target.tagName === 'BUTTON') {
-           options.hAxis.format = e.target.id === 'none' ? '' : e.target.id;
-           chart.draw(data, google.charts.Bar.convertOptions(options));
-         }
-       }
-     }
+    chart.draw(data, google.charts.Bar.convertOptions(options));
 
-// end add //
-      </script>
-      <script src="js/modernizr-2.6.2.min.js"></script>
-          <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    var btns = document.getElementById('btn-group');
 
-<style>
-      h1 {
-        background-color: #transparent;
-        color: #fff;
-        font-size: 80px;
-        font-weight: 400;
-        left: 0;
-        letter-spacing: 10px;
-        margin: auto;
-        padding: 20px 20px 20px 28px;
-        position: absolute;
-        right: 0;
-        text-align: center;!important
-        text-transform: uppercase;
-        top: 50%;
-        width: intrinsic;
-        width: -moz-max-content;
-        width: -webkit-max-content;
+    btns.onclick = function (e) {
+
+      if (e.target.tagName === 'BUTTON') {
+        options.vAxis.format = e.target.id === 'none' ? '' : e.target.id;
+        chart.draw(data, google.charts.Bar.convertOptions(options));
       }
-      </style>
-</head>
+    }
+  }
 
-  <body>
-    <header role="banner" id="fh5co-header">
-        <div class="container">
-          <!-- <div class="row"> -->
-            <nav class="navbar navbar-default">
-              <div class="navbar-header">
-                <!-- Mobile Toggle Menu Button -->
-            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-               <a class="navbar-brand" href="index.html">SCCEd</a>
+
+      // end add //
+            </script>
+            <script src="js/modernizr-2.6.2.min.js"></script>
+                <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+      <style>
+            h1 {
+              background-color: #transparent;
+              color: #fff;
+              font-size: 80px;
+              font-weight: 400;
+              left: 0;
+              letter-spacing: 10px;
+              margin: auto;
+              padding: 20px 20px 20px 28px;
+              position: absolute;
+              right: 0;
+              text-align: center;!important
+              text-transform: uppercase;
+              top: 50%;
+              width: intrinsic;
+              width: -moz-max-content;
+              width: -webkit-max-content;
+            }
+
+
+      .map-container{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+      }
+      .map-container iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+    </style>
+
+            </style>
+      </head>
+
+        <body>
+          <header role="banner" id="fh5co-header">
+              <div class="container">
+                <!-- <div class="row"> -->
+                  <nav class="navbar navbar-default">
+                    <div class="navbar-header">
+                      <!-- Mobile Toggle Menu Button -->
+                  <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                     <a class="navbar-brand" href="index.html">SCCEd</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="index.html" data-nav-section="home"><span>Home</span></a></li>
+                        <li><a href="#" data-nav-section="citizen science "><span>Citizen Science</span></a></li>
+                        <li><a href="#" data-nav-section="infrastructure"><span>Infrastructure</span></a></li>
+                        <li><a href="#" data-nav-section="curriculum"><span>Curriculum</span></a></li>
+                        <li><a href="#" data-nav-section="about"><span>About</span></a></li>
+                        <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                <!-- </div> -->
               </div>
-              <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="active"><a href="index.html" data-nav-section="home"><span>Home</span></a></li>
-                  <li><a href="#" data-nav-section="citizen science "><span>Citizen Science</span></a></li>
-                  <li><a href="#" data-nav-section="infrastructure"><span>Infrastructure</span></a></li>
-                  <li><a href="#" data-nav-section="curriculum"><span>Curriculum</span></a></li>
-                  <li><a href="#" data-nav-section="about"><span>About</span></a></li>
-                  <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
-                </ul>
+              <!--Carousel-->
+          </header>
+          <section>
+            <div>
+                  <nav class="navbar navbar-vertical-left">
+                    <ul class="nav navbar-nav">
+                      <li><a href="buildings.html">
+                          <i class="fa fa-fw fa-lg fas fa-city"></i>
+                          <span>buildings</span>
+                        </a>
+                      </li>
+                      <li><a href="energy.html">
+                          <i class="fa fa-fw fa-lg fas fa-bolt"></i>
+                          <span>Energy</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="food.html">
+                          <i class="fa fa-fw fa-lg fa-leaf"></i>
+                          <span>Food</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="publicspace.html">
+                          <i class="fa fa-fw fa-lg fa-users"></i>
+                          <span>Public Space</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="transcom.html">
+                          <i class="fa fa-fw fa-lg fa-bus-alt"></i>
+                          <span>Trans-Com</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="wastesanitation.html">
+                          <i class="fa fa-fw fa-lg fa-users"></i>
+                          <span>Waste & San</span>
+                        </a>
+                      </li>
+                      <li><a href="water.html">
+                          <i class="fa fa-fw fa-lg fa-users"></i>
+                          <span>Water</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+          </section>
+
+          <!-- Title Page-->
+          <section class="img-1 img-1f">
+            <h1>Food Systems</h1>
+          </section>
+
+      <!-- Wellbeing-->
+          <section>
+            <div class="content">
+              <div class="row">
+                <h3>Local food production has important ecological, economic and social benefits for residents.</h3>
+                <div class="col-md-6">
+              <h4> Research also suggest it improves our lives and wellbeing.
+                Community gardens help build community by creating a place to meet others and get to know their neighbors. Gardens also provide a sense of ownership, connection, and responsibility.</h4>
+                <br>
+                <br><blockquote cite="www.jacn.org"> "The social connections that gardens foster may be an
+                  equally (or more) important policy rationale for supporting
+                  gardens as part of neighborhood green space.
+                  Protections against the sale and redevelopment of garden
+                  sites may need to be provided directly by the city or in partnership with non-profit and/or quasi-public entities. "<br>
+                </blockquote>
+              </h4>
+              <p>Adapted or direct qoute from Sustainable Healthy Cities Journal Brief - 2019, No. 10 - Community Gardens and Social Benefits</p>
+            </div>
+              <div class="col-md-6">
+                <h3></h3>
+                <img src="images/garden.jpg" style="width:100%;">
               </div>
-            </nav>
-          <!-- </div> -->
-        </div>
-    </header>
-    <section>
-      <div>
-            <nav class="navbar navbar-vertical-left">
-              <ul class="nav navbar-nav">
-                <li><a href="buildings.html">
-                    <i class="fa fa-fw fa-lg fa-smile-o"></i>
-                    <span>buildings</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="energy.html">
-                    <i class="fa fa-fw fa-lg fas fa-battery-half"></i>
-                    <span>Energy</span>
-                  </a>
-                </li>
-                <li>
-                    <a href="food.html">
-                    <i class="fa fa-fw fa-lg fa-leaf"></i>
-                    <span>Food</span>
-                  </a>
-                </li>
-                <li>
-                    <a href="publicspace.html">
-                    <i class="fa fa-fw fa-lg fa-users"></i>
-                    <span>Public Space</span>
-                  </a>
-                </li>
-                <li>
-                    <a href="transcom.html">
-                    <i class="fa fa-fw fa-lg fa-users"></i>
-                    <span>Trans-Com</span>
-                  </a>
-                </li>
-                <li>
-                    <a href="wastesanitation.html">
-                    <i class="fa fa-fw fa-lg fa-users"></i>
-                    <span>Waste & San</span>
-                  </a>
-                </li>
-                <li>
-                    <a href="water.html">
-                    <i class="fa fa-fw fa-lg fa-users"></i>
-                    <span>Water</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-      </div>
-    </section>
-    <section class="img-1 img-1f">
-      <h1>Food Systems</h1>
-    </section>
+              </div>
+          </section>
 
-    <section>
-      <div class="content">
-        <h3>My Love for Traveling</h3>
-        <p>I love traveling to new places and being immersed in a different culture.</p>
-         <div id="chart1_div"></div>
-      </div>
-    </section>
+            <!-- health-->
+          <section class="img-2 img-2f">
+            <h1>Food & Health</h1>
+          </section>
+          <section class="static">
+            <div class="content">
+              <h3>Nourishing ourselves and the world</h3>
+                <div class="row">
+                  <div class="col-md-4">
+                <h4>Access to a variety of fresh and healthy ingredients and food options is important in staying healthy. A healthy diet is improves heart, bones, brain, mood and memory function. Poor diets are linked to diseases such as diabetes and obesity. <br>
+                  <br><blockquote cite="www.jacn.org"> Becasue of soild depletion "Fruits and vegetables grown decades ago were much richer in vitamins and minerals than the varieties most of us get today."<br>
+                  </blockquote>
+                </h4>
+                <p>Journal of the American College of Nutrition, www.jacn.org; Kushi Institute, www.kushiinstitute.org; Organic Consumers Association, www.organicconsumers.org.</p>
+              </div>
+                <div class="col-md-8">
+                  <h4>Percent of people under nourished by world region</h4>
+                    <div id="chart_div2"></div>
+                  <p></p>
+                </div>
+              </div>
+          </div>
+          </section>
 
-    <section class="img-2">
-      <h1>Explore</h1>
-    </section>
+        <!-- Environment-->
+          <section class="img-1 img-3f">
+            <h1>environment</h1>
+          </section>
 
-    <section class="static">
-      <div class="content">
-        <h3>Explore New Destinations</h3>
-        <p>Go to exotic places, go to less touristy places, take a guided tour(after all locals know best)!</p>
-      </div>
-    </section>
+          <section class="static">
+              <div class="content">
+                <h3>50% of all crops grown are from four plants: Soy, Corn, Wheat, and Rice</h3>
+                <div class="row">
+                  <div class="col-md-4">
+                <h4>Even with an increased knowledge in sustainable farming techniques, large scale industrial farming is a primary source of water and air pollution, habitat loss and deforestation. Crop and bio-diversity has declined steadily since the 1980's.</h4>
+                <blockquote cite=http://www.environmentreports.com/how-does-agriculture-change/#section2><h4>Our best estimates are that global food demand will increase between 60 and 100 percent by mid-century. Even if we meet this demand through sustainable intensification of agriculture, nearly all remaining forests and grasslands in the tropics that are suitable for agriculture would need to be plowed up.</h4>
+                </blockquote>
+                <p>http://www.environmentreports.com/how-does-agriculture-change/#section2</p>
+              </div>
+              <div class="col-md-8">
+              <h3>Food systems share of natural resource use and GHG contributions.</h3>
+              <div id="chart_div1"></div>
+              <p>Boyer & Ramaswami 2017, Env.Sci. Tech.</p>
+              </div>
+            </div>
+          </section>
 
-    <section class="img-3">
-      <h1>Adventure</h1>
-    </section>
+        <!-- Equity-->
+          <section class="img-1 img-2f">
+            <h1>Equity</h1>
+          </section>
+          <section class="static">
+              <div class="content">
+                <div class="row">
+                  <h3>Access to a varity of healthy food is distributed unevenly and can be dependent on acces to transportation"</h3>
+                    <div class="col-md-3">
+                      <h4> Scroll through the slides on the map to view food sources in the twin cites based on access to transportation, income, and other demographic indicators.</h4>
+                      <p>Source map data by Ryan Mattke, Map & Geospatial Information Librarian, University of Minnesota</p>
+                    </div>
+                  <div class="col-md-9">
+                      <iframe class="embed-responsive-item" src="https://umn.maps.arcgis.com/apps/presentation/index.html?webmap=ab7563e9e9ed45738db574ece7156e28&slide=1" width="100%" height="400px"webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div></div></div></section>
+          <!--Notes-->
+          <section class="static">
+            <div class="content">
+              <h3>credits</h3>
+              <p>Photo by Kaboompics .com from Pexels https://www.pexels.com/photo/lunch-table-5929/</p>
+              <p>https://www.pexels.com/photo/scenic-view-of-agricultural-field-against-sky-during-sunset-325944/</p>
+              <p>Photo by Clem Onojeghuo from Pexels </p>
+              <p> food insecurity http://www.fao.org/3/a-i4646e.pdf</p>
+              <p> less nutrition https://www.scientificamerican.com/article/soil-depletion-and-nutrition-loss/</p>
+            </div>
+          </section>
 
-    <section class="static">
-      <div class="content">
-        <h3>Take an Adventurous Risk</h3>
-        <p>Do something you wouldn't normally do, make new friends, get out of your comfort zone.</p>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<div id="chart2_div"></div>
-<br/>
-      </div>
-    </section>
-
-    <section class="img-4">
-      <h1>Indulge</h1>
-    </section>
-
-    <section class="static">
-      <div class="content">
-        <h3>Image an Credits</h3>
-        <p>Photo by Kaboompics .com from Pexels https://www.pexels.com/photo/lunch-table-5929/</p>
-        <p>https://www.pexels.com/photo/scenic-view-of-agricultural-field-against-sky-during-sunset-325944/</p>
-        <p>Photo by Clem Onojeghuo from Pexels </p>
-      </div>
-    </section>
 
 <!--footer-->
 <footer id="footer" role="contentinfo">
@@ -274,7 +363,6 @@ google.charts.load('current', {
       <div class="col-md-12 text-center">
         <ul class="social social-circle">
           <li><a href="https://www.instagram.com/scceducators/?hl=en"><i class="icon-instagram"></i></a></li>
-          <li><a href="#"><i class="icon-facebook"></i></a></li>
           <li><a href="https://www.youtube.com/playlist?list=PLbB3x0XGkuHMCvuaJZt9Hx0q1EevIxT18"><i class="icon-youtube"></i></a></li>
         </ul>
       </div>
