@@ -15,13 +15,14 @@ body, html {
 }
 /* Food */
 .img-1f {
-  background-image: url('../images/foodtop.png');
+  background-image: url('../images/foodtop1.png');
 }
 .img-2f {
-  background-image: url('sustainablecities.jpg');
+  background-image: url('../images/foodh.png');
+
 }
 .img-3f {
-  background-image: url('sustainablecities.jpg');
+  background-image: url('../images/foode2.png');
 }
 .img-4f {
   background-image: url('sustainablecities.jpg');
@@ -30,15 +31,15 @@ body, html {
 .img-1e {
   background-image: url('../images/foodtop.png');
 }
-.img-2 {
+.img-2e {
   background-image: url('sustainablecities.jpg');
 }
 
-.img-3 {
+.img-3e {
   background-image: url('sustainablecities.jpg');
 }
 
-.img-4 {
+.img-4e {
   background-image: url('sustainablecities.jpg');
 }
 
