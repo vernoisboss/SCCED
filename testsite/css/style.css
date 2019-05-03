@@ -215,6 +215,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   #fh5co-header .navbar-brand {
     color: #52d3aa !important;
+    padding-bottom: 5px;
   }
   #fh5co-header #navbar li a {
     color: rgba(0, 0, 0, 0.5) !important;
@@ -243,9 +244,10 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0;
   margin-bottom: 0;
 }
+/* Changes nav main font*/
 #fh5co-header #navbar li a {
   font-family: "Source Sans Pro", Arial, sans-serif;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, .9);
   position: relative;
   font-size: 19px;
   font-weight: 300;
@@ -318,7 +320,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #52d3aa;
 }
 #fh5co-header.navbar-fixed-top #navbar li a {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(230, 126, 34, 0.5);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
