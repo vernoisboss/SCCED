@@ -13,7 +13,14 @@ body, html {
   position: relative;
   width: 100vw;
 }
-
+/* seis */
+.img-1seis {
+  background-image: url('../images/seis.png');
+}
+/* Citizen Science */
+.img-1cst {
+  background-image: url('../images/cst.png');
+}
 /* Buildings */
 .img-1bs {
   background-image: url('../images/bstop.png');
