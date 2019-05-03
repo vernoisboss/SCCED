@@ -38,96 +38,6 @@
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <script type="text/javascript">
 
-      // Google Charts Load options//
-              google.charts.load('current', {'packages':['corechart','bar']});
-
-
-              // Chart 1 //
-
-                   google.charts.setOnLoadCallback(drawChart1);
-
-                   function drawChart1() {
-                     var data = google.visualization.arrayToDataTable([
-                       ['Cities Resource Use', 'GHG Emmisions', 'Water Use', 'Land'],
-                       ['2014', 30, 80, 11],
-
-                     ]);
-
-                     var options = {
-                       chart: {
-                         title: 'Feeding Cities',
-                         subtitle: 'Foods role in Global Resource Use, percent%',
-                       },
-                       bars: 'horizontal', // Required for Material Bar Charts.
-                       hAxis: {
-                         format: 'decimal'
-                       },
-                       height: 200,
-                       width: 500,
-                       'backgroundColor': 'transparent',
-                       colors: ['#b94f74', '#0000FF', '#a37053']
-                     };
-
-                     var chart = new google.charts.Bar(document.getElementById('chart_div1'));
-
-                     chart.draw(data, google.charts.Bar.convertOptions(options));
-
-                     var btns = document.getElementById('btn-group');
-
-                     btns.onclick = function(e) {
-
-                       if (e.target.tagName === 'BUTTON') {
-                         options.hAxis.format = e.target.id === 'none' ? '' : e.target.id;
-                         chart.draw(data, google.charts.Bar.convertOptions(options));
-                       }
-                     }
-                   }
-      // Chart 2 //
-  google.charts.setOnLoadCallback(drawChart2);
-
-  function drawChart2() {
-    var data = google.visualization.arrayToDataTable([
-      ['Region', '1992', '2016'],
-      ['Sub Saharan Africa', 33.2, 23.2],
-      ['Caribbean',27.0, 19.8],
-      ['Southern Asia',23.9, 15.7],
-      ['Oceana', 15.7, 14.2],
-      ['Eastern Asia', 23.2, 9.6],
-      ['South-Eastern Asia', 30.6, 9.6],
-      ['Western-Asia',6.4 , 8.4],
-      ['Caucasus and Central Asia',14.5, 7],
-      ['Latin America', 13.5, 4],
-      ['Northern Africa', 4, 4],
-    ]);
-
-    var options = {
-      chart: {
-        title: 'FAO The state of food insecurity in the world 2015',
-      },
-      bars: 'horizontal',
-      hAxis: {format: 'decimal'},
-      height: 400,
-      Width: 250,
-      'backgroundColor': 'transparent',
-      colors: ['#1b9e77', '#d95f02', '#7570b3']
-    };
-
-    var chart = new google.charts.Bar(document.getElementById('chart_div2'));
-
-    chart.draw(data, google.charts.Bar.convertOptions(options));
-
-    var btns = document.getElementById('btn-group');
-
-    btns.onclick = function (e) {
-
-      if (e.target.tagName === 'BUTTON') {
-        options.vAxis.format = e.target.id === 'none' ? '' : e.target.id;
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    }
-  }
-
-
       // end add //
             </script>
             <script src="js/modernizr-2.6.2.min.js"></script>
@@ -153,7 +63,9 @@
               width: -webkit-max-content;
             }
 
+            .seis {
 
+            }
       .map-container{
         overflow:hidden;
         padding-bottom:56.25%;
@@ -169,7 +81,6 @@
       }
     </style>
 
-            </style>
       </head>
 
         <body>
@@ -245,98 +156,19 @@
           </section>
 
           <!-- Title Page-->
-          <section class="img-1 img-1f">
-            <h1>Food Systems</h1>
-          </section>
-
-      <!-- Wellbeing-->
-          <section>
-            <div class="content">
-              <div class="row">
-                <h3>Local food production has important ecological, economic and social benefits for residents.</h3>
-                <div class="col-md-6">
-              <h4> Research also suggest it improves our lives and wellbeing.
-                Community gardens help build community by creating a place to meet others and get to know their neighbors. Gardens also provide a sense of ownership, connection, and responsibility.</h4>
-                <br>
-                <br><blockquote cite="www.jacn.org"> "The social connections that gardens foster may be an
-                  equally (or more) important policy rationale for supporting
-                  gardens as part of neighborhood green space.
-                  Protections against the sale and redevelopment of garden
-                  sites may need to be provided directly by the city or in partnership with non-profit and/or quasi-public entities. "<br>
-                </blockquote>
-              </h4>
-              <p>Adapted or direct qoute from Sustainable Healthy Cities Journal Brief - 2019, No. 10 - Community Gardens and Social Benefits</p>
-            </div>
-              <div class="col-md-6">
-                <h3></h3>
-                <img src="images/garden.jpg" style="width:100%;">
-              </div>
-              </div>
-          </section>
-
-            <!-- health-->
-          <section class="img-2 img-2f">
-            <h1>Food & Health</h1>
-          </section>
-          <section class="static">
-            <div class="content">
-              <h3>Nourishing ourselves and the world</h3>
-                <div class="row">
-                  <div class="col-md-4">
-                <h4>Access to a variety of fresh and healthy ingredients and food options is important in staying healthy. A healthy diet is improves heart, bones, brain, mood and memory function. Poor diets are linked to diseases such as diabetes and obesity. <br>
-                  <br><blockquote cite="www.jacn.org"> Becasue of soild depletion "Fruits and vegetables grown decades ago were much richer in vitamins and minerals than the varieties most of us get today."<br>
-                  </blockquote>
-                </h4>
-                <p>Journal of the American College of Nutrition, www.jacn.org; Kushi Institute, www.kushiinstitute.org; Organic Consumers Association, www.organicconsumers.org.<br>
-                Health information from: https://www.medicalnewstoday.com/articles/322268.php</p>
-              </div>
-                <div class="col-md-8">
-                  <h4>Percent of people under nourished by world region</h4>
-                    <div id="chart_div2"></div>
-                  <p></p>
-                </div>
-              </div>
-          </div>
-          </section>
-
-        <!-- Environment-->
-          <section class="img-1 img-3f">
-            <h1>environment</h1>
-          </section>
-
-          <section class="static">
-              <div class="content">
-                <h3>50% of all crops grown are from four plants: Soy, Corn, Wheat, and Rice</h3>
-                <div class="row">
-                  <div class="col-md-4">
-                <h4>Even with an increased knowledge in sustainable farming techniques, large scale industrial farming is a primary source of water and air pollution, habitat loss and deforestation. Crop and bio-diversity has declined steadily since the 1980's.</h4>
-                <blockquote cite=http://www.environmentreports.com/how-does-agriculture-change/#section2><h4>Our best estimates are that global food demand will increase between 60 and 100 percent by mid-century. Even if we meet this demand through sustainable intensification of agriculture, nearly all remaining forests and grasslands in the tropics that are suitable for agriculture would need to be plowed up.</h4>
-                </blockquote>
-                <p>http://www.environmentreports.com/how-does-agriculture-change/#section2</p>
-              </div>
-              <div class="col-md-8">
-              <h3>Food systems share of natural resource use and GHG contributions.</h3>
-              <div id="chart_div1"></div>
-              <p>Boyer & Ramaswami 2017, Env.Sci. Tech.</p>
-              </div>
-            </div>
-          </section>
-
-        <!-- Equity-->
-          <section class="img-1 img-2f">
-            <h1>Equity</h1>
-          </section>
           <section class="static">
               <div class="content">
                 <div class="row">
-                  <h3>Access to a variety of healthy food is distributed unevenly and can be dependent on acces to transportation</h3>
-                    <div class="col-md-3">
-                      <h4> Scroll through the slides on the map to view food sources in the twin cites based on access to transportation, income, and other demographic indicators.</h4>
-                      <p>Source map data by Ryan Mattke, Map & Geospatial Information Librarian, University of Minnesota</p>
-                    </div>
-                  <div class="col-md-9">
-                      <iframe class="embed-responsive-item" src="https://umn.maps.arcgis.com/apps/presentation/index.html?webmap=ab7563e9e9ed45738db574ece7156e28&slide=1" width="100%" height="400px"webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div></div></div></section>
+                  <div class="col-md-12">
+                      <p><br><br><br></div></div></div></section>
+
+          <section class="static">
+              <div class="content">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div align="center">
+                    <img src="images/seis.png" alt="socio-ecological Infrastructural Systems diagram" width="500" >
+                  </div><div></section>
           <!--Notes-->
 
 

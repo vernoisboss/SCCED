@@ -41,28 +41,6 @@
       // Google Charts Load options//
               google.charts.load('current', {'packages':['corechart','bar']});
 
-
-              google.charts.setOnLoadCallback(drawChart3);
-           function drawChart3() {
-             var data = google.visualization.arrayToDataTable([
-               ['Place', 'Amount of Time'],
-               ['In a residence',     68.7],
-               ['Office or Factory',      5.4],
-               ['Outdoors',  7.6],
-               ['In a Vehicle', 3.5],
-               ['Other Indoor Location ',    11.5],
-               ['Bar or restaraunt',    1.8],
-             ]);
-
-             var options = {
-               title: 'Where we spend time',
-               pieHole: 0.4,
-                'backgroundColor': 'transparent',
-             };
-
-             var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-             chart.draw(data, options);
-           }
               // Chart 1 //
 
               google.charts.setOnLoadCallback(csmap);
@@ -94,28 +72,6 @@ function csmap() {
  chart.draw(data, options);
 }
 
-      // Chart 2 //
-      google.charts.setOnLoadCallback(drawpChart);
-         function drawpChart() {
-             var data = google.visualization.arrayToDataTable([
-                        ['Sectors', 'Percent of GHG emissions',],
-                        ['Other Sectors', 60],
-                        ['Embodied Carbon', 11],
-                        ['Building Operations', 28],
-                      ]);
-         var options = {
-
-           pieSliceText: 'label',
-           title: 'GHG emmisions from building sector',
-           pieStartAngle: 100,
-           height: 400,
-           width: 720,
-           'backgroundColor': 'transparent',
-         };
-
-           var chart = new google.visualization.PieChart(document.getElementById('ppiechart'));
-           chart.draw(data, options);
-         }
 
 
       // end add //
@@ -173,8 +129,8 @@ function csmap() {
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                       <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="index.html" data-nav-section="home"><span>Home</span></a></li>
-                        <li><a href="#" data-nav-section="citizen science "><span>Citizen Science</span></a></li>
+                        <li><a href="index.html" data-nav-section="home"><span>Home</span></a></li>
+                        <li class="active"><a href="#" data-nav-section="citizen science "><span>Citizen Science</span></a></li>
                         <li><a href="#" data-nav-section="infrastructure"><span>Infrastructure</span></a></li>
                         <li><a href="#" data-nav-section="curriculum"><span>Curriculum</span></a></li>
                         <li><a href="#" data-nav-section="about"><span>About</span></a></li>
@@ -190,9 +146,9 @@ function csmap() {
             <div>
                   <nav class="navbar navbar-vertical-left">
                     <ul class="nav navbar-nav">
-                      <li><a href="buildings.html">
+                      <li><a href="Buildings.html">
                           <i class="fa fa-fw fa-lg fas fa-city"></i>
-                          <span>buildings</span>
+                          <span>Buildings</span>
                         </a>
                       </li>
                       <li><a href="energy.html">
@@ -235,27 +191,20 @@ function csmap() {
           </section>
 
           <!-- Title Page-->
-
-            <!-- health-->
-          <section class="img-2 img-2bsh">
-            <h1>Buildings and health</h1>
+          <section class="img-1 img-1cst">
+            <h1>Citizen Science Data</h1>
           </section>
           <section class="static">
             <div class="content">
-              <h3>Buildings and Health</h3>
                 <div class="row">
-                  <div class="col-md-6">
-                <h4>Healthy buildings and shelter have non toxic building materials, are built to withstand natural disasters and are comfortable for the climate of the region<br>
-                Damp conditions, insufficient daylight, or uncomfortably cold temperatures can all effect health. The increase in extreme weather events due to climate change means more extreme hot, wet and sometimes cold weather patterns that older structures were not designed for.</h4>
-                  <br><blockquote cite="www.jacn.org"> The 1995 Chicago heat wave was a heat wave which led to 739 heat-related deaths in Chicago over a period of five days.[1] Most of the victims of the heat wave were elderly poor residents of the city, who could not afford air conditioning and did not open windows or sleep outside for fear of crime"<br>
-                  </blockquote>
-                  <p>https://en.wikipedia.org/wiki/1995_Chicago_heat_wave</p>
-              </div>
-                <div class="col-md-6">
-                  <h4>Workers and residents are at risk from toxic or hazzardous building materials. Asbestos is one type and is banned in 60 countries, but not in the US</h4>
-                  <p>Source: Asbestos.com</p>
+                  <h3>Student education program overview</h3>
+                  <div class="col-md-8">
+                    <div class="embed-responsive embed-responsive-16by9">
+                  <iframe src="https://slides.com/matthewvernon/deck-7-9/embed?byline=hidden&share=hidden" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              </div></div>
+                <div class="col-md-4">
                   <div id="csmap"</div>
-                </div></div>
+                </div></div></div>
           </section>
 
 
