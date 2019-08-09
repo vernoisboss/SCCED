@@ -1,0 +1,124 @@
+body, html {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.img-1, .img-2, .img-3, .img-4 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.75;
+  position: relative;
+  width: 100vw;
+}
+
+/* Buildings */
+.img-1bs {
+  background-image: url('../images/bstop.png');
+}
+.img-2bsh {
+  background-image: url('../images/bsh.png');
+}
+.img-3bse {
+  background-image: url('../images/bse.png');
+}
+.img-4bseq {
+  background-image: url('../images/bseq.png');
+}
+/* Food */
+.img-1f {
+  background-image: url('../images/foodtop1.png');
+}
+.img-2f {
+  background-image: url('../images/foodh.png');
+
+}
+.img-3f {
+  background-image: url('../images/foode2.png');
+}
+.img-4f {
+  background-image: url('sustainablecities.jpg');
+}
+/* Energy */
+.img-1e {
+  background-image: url('../images/foodtop.png');
+}
+.img-2e {
+  background-image: url('sustainablecities.jpg');
+}
+
+.img-3e {
+  background-image: url('sustainablecities.jpg');
+}
+
+.img-4e {
+  background-image: url('sustainablecities.jpg');
+}
+
+
+.static {
+  position: relative;
+}
+
+.content {
+  background-color: #a4bfb8;
+  color: #5a5a5c;
+  padding-left: 165px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  text-align: left;
+}
+
+h1 {
+  background-color: transparent;
+  color: #fff;
+  font-size: 80px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 10px;
+  margin: auto;
+  padding: 20px 20px 20px 28px;
+  position: absolute;
+  right: 0;
+  text-align: center;!important
+  text-transform: uppercase;
+  top: 50%;
+  width: intrinsic;
+  width: -moz-max-content;
+  width: -webkit-max-content;
+}
+
+h3 {
+  color: #111;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1030px) {
+  .img-1, .img-2, .img-3, .img-4 {
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 35px;
+    letter-spacing: 5px;
+    padding: 10px;
+  }
+  h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+  p {
+    line-height: 1.5em;
+    text-align: center;
+  }
+  .content {
+    padding: 50px 5px;
+  }
+}
