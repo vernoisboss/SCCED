@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Food Systems</title>
+  <link rel="stylesheet" href="css/parallax.css" media="screen">
+  <link rel="shortcut icon" href="favicon.ico">
+<!-- Fonts icons -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- vertical menue -->
+  <!-- FontAwesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Twitter Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+<!--carousel-->
+<link rel="stylesheet" type="text/css" href="css/xstyle.css">
+
+
+  <!-- vertical Menue -->
+    <link rel="stylesheet" href="css/bootstrap-vertical-menu.css">
+  <!--Load the AJAX API-->
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+
+      // Google Charts Load options//
+              google.charts.load('current', {'packages':['corechart','bar']});
+
+              // Chart 1 //
+
+              google.charts.setOnLoadCallback(csmap);
+
+function csmap() {
+
+ var data = google.visualization.arrayToDataTable([
+   ['Type', 'Number of points mapped',],
+   ['Neighborhood Wellbeing', 312],
+   ['Sustainability', 209],
+ ]);
+
+ var options = {
+   title: 'Student Citizen Science Data Collection',
+   chartArea: {width: '100%'},
+   'backgroundColor': 'transparent',
+  legend: { position: "none" },
+   hAxis: {
+     title: 'Points Mapped',
+     minValue: 0
+   },
+   vAxis: {
+     title: ''
+   }
+ };
+
+ var chart = new google.visualization.BarChart(document.getElementById('csmap'));
+
+ chart.draw(data, options);
+}
+
+
+
+      // end add //
+            </script>
+            <script src="js/modernizr-2.6.2.min.js"></script>
+                <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+      <style>
+            h1 {
+              background-color: #transparent;
+              color: #fff;
+              font-size: 80px;
+              font-weight: 400;
+              left: 0;
+              letter-spacing: 10px;
+              margin: auto;
+              padding: 20px 20px 20px 28px;
+              position: absolute;
+              right: 0;
+              text-align: center;!important
+              text-transform: uppercase;
+              top: 50%;
+              width: intrinsic;
+              width: -moz-max-content;
+              width: -webkit-max-content;
+            }
+
+
+      .map-container{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+      }
+      .map-container iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+    </style>
+
+      </head>
+
+        <body>
+          <header role="banner" id="fh5co-header">
+              <div class="container">
+                <!-- <div class="row"> -->
+                  <nav class="navbar navbar-default">
+                    <div class="navbar-header">
+                      <!-- Mobile Toggle Menu Button -->
+                  <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                     <a class="navbar-brand" href="index.html">SCCEd</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html" data-nav-section="home"><span>Home</span></a></li>
+                        <li class="active"><a href="#" data-nav-section="citizen science "><span>Citizen Science</span></a></li>
+                        <li><a href="#" data-nav-section="infrastructure"><span>Infrastructure</span></a></li>
+                        <li><a href="#" data-nav-section="curriculum"><span>Curriculum</span></a></li>
+                        <li><a href="#" data-nav-section="about"><span>About</span></a></li>
+                        <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                <!-- </div> -->
+              </div>
+              <!--Carousel-->
+          </header>
+          <section>
+            <div>
+                  <nav class="navbar navbar-vertical-left">
+                    <ul class="nav navbar-nav">
+                      <li><a href="buildings.html">
+                          <i class="fa fa-fw fa-lg fas fa-city"></i>
+                          <span>Buildings</span>
+                        </a>
+                      </li>
+                      <li><a href="energy.html">
+                          <i class="fa fa-fw fa-lg fas fa-bolt"></i>
+                          <span>Energy</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="food.html">
+                          <i class="fa fa-fw fa-lg fa-leaf"></i>
+                          <span>Food</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="publicspace.html">
+                          <i class="fa fa-fw fa-lg fa-users"></i>
+                          <span>Public Space</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="transcom.html">
+                          <i class="fa fa-fw fa-lg fa-bus-alt"></i>
+                          <span>Trans-Com</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="wastesanitation.html">
+                          <i class="fa fa-fw fa-lg fa-users"></i>
+                          <span>Waste & San</span>
+                        </a>
+                      </li>
+                      <li><a href="water.html">
+                          <i class="fa fa-fw fa-lg fa-users"></i>
+                          <span>Water</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+          </section>
+
+          <!-- Title Page-->
+          <section class="img-1 img-1cst">
+            <h1>Citizen Science Data</h1>
+          </section>
+          <section class="static">
+            <div class="content">
+                <div class="row">
+                  <h3>Student education program overview</h3>
+                  <div class="col-md-8">
+                    <div class="embed-responsive embed-responsive-16by9">
+                  <iframe src="https://slides.com/matthewvernon/deck-7-9/embed?byline=hidden&share=hidden" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              </div></div>
+                <div class="col-md-4">
+                  <div id="csmap"</div>
+                </div></div></div>
+          </section>
+
+
+          <section class="static">
+              <div class="content">
+                <div class="row">
+                  <h3>Student data collection of Sustainability and Neighborhood Wellbeing in the metro area</h3>
+                  <div class="col-md-12">
+                      <iframe class="embed-responsive-item" src="https://umn.maps.arcgis.com/apps/presentation/index.html?webmap=f429f8ebc8304f27ba1dba78e6d1256a" width="100%" height="600px"webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div></div></div></section>
+          <!--Notes-->
+
+
+<!--footer-->
+<footer id="footer" role="contentinfo">
+  <a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+  <div class="container">
+    <div class="">
+      <div class="col-md-12 text-center">
+        <p>&copy;</i>University of Minnesota <br>Created by Matt Vernon <a href="https://www.nsf.gov/news/news_summ.jsp?cntn_id=243312&org=NSF&from=news" target="_blank">NSF</a> </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <ul class="social social-circle">
+          <li><a href="https://www.instagram.com/scceducators/?hl=en"><i class="icon-instagram"></i></a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLbB3x0XGkuHMCvuaJZt9Hx0q1EevIxT18"><i class="icon-youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Stellar Parallax -->
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- Counters -->
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.countTodecimal.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+    <script src="js/google_map.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Main JS (Do not remove) -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

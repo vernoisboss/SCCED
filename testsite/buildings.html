@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Food Systems</title>
+  <link rel="stylesheet" href="css/parallax.css" media="screen">
+  <link rel="shortcut icon" href="favicon.ico">
+<!-- Fonts icons -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- vertical menue -->
+  <!-- FontAwesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Twitter Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+<!--carousel-->
+<link rel="stylesheet" type="text/css" href="css/xstyle.css">
+
+
+  <!-- vertical Menue -->
+    <link rel="stylesheet" href="css/bootstrap-vertical-menu.css">
+  <!--Load the AJAX API-->
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+
+      // Google Charts Load options//
+              google.charts.load('current', {'packages':['corechart','bar']});
+
+
+              google.charts.setOnLoadCallback(drawChart3);
+           function drawChart3() {
+             var data = google.visualization.arrayToDataTable([
+               ['Place', 'Amount of Time'],
+               ['In a residence',     68.7],
+               ['Office or Factory',      5.4],
+               ['Outdoors',  7.6],
+               ['In a Vehicle', 3.5],
+               ['Other Indoor Location ',    11.5],
+               ['Bar or restaraunt',    1.8],
+             ]);
+
+             var options = {
+               title: 'Where we spend time',
+               pieHole: 0.4,
+                'backgroundColor': 'transparent',
+             };
+
+             var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+             chart.draw(data, options);
+           }
+              // Chart 1 //
+
+              google.charts.setOnLoadCallback(asbestos);
+
+function asbestos() {
+
+ var data = google.visualization.arrayToDataTable([
+   ['Diseases', 'US Deaths', 'Global Deaths',],
+   ['Cancer', 34270, 181450],
+   ['Mesothelioma', 3161,27600],
+   ['Ovarian Cancer', 787, 60222],
+   ['Laryngeal Cancer', 443, 3743],
+   ['Asbestosis', 613, 3495],
+ ]);
+
+ var options = {
+   title: 'Annual Deaths related to Asbestos Building Materials',
+   chartArea: {width: '100%'},
+   'backgroundColor': 'transparent',
+  legend: { position: "none" },
+   hAxis: {
+     title: 'Annual Deaths',
+     minValue: 0
+   },
+   vAxis: {
+     title: 'Disease'
+   }
+ };
+
+ var chart = new google.visualization.BarChart(document.getElementById('asbestos'));
+
+ chart.draw(data, options);
+}
+
+      // Chart 2 //
+      google.charts.setOnLoadCallback(drawpChart);
+         function drawpChart() {
+             var data = google.visualization.arrayToDataTable([
+                        ['Sectors', 'Percent of GHG emissions',],
+                        ['Other Sectors', 60],
+                        ['Embodied Carbon', 11],
+                        ['Building Operations', 28],
+                      ]);
+         var options = {
+
+           pieSliceText: 'label',
+           title: 'GHG emmisions from building sector',
+           pieStartAngle: 100,
+           height: 400,
+           width: 720,
+           'backgroundColor': 'transparent',
+         };
+
+           var chart = new google.visualization.PieChart(document.getElementById('ppiechart'));
+           chart.draw(data, options);
+         }
+
+
+      // end add //
+            </script>
+            <script src="js/modernizr-2.6.2.min.js"></script>
+                <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+      <style>
+            h1 {
+              background-color: #transparent;
+              color: #fff;
+              font-size: 80px;
+              font-weight: 400;
+              left: 0;
+              letter-spacing: 10px;
+              margin: auto;
+              padding: 20px 20px 20px 28px;
+              position: absolute;
+              right: 0;
+              text-align: center;!important
+              text-transform: uppercase;
+              top: 50%;
+              width: intrinsic;
+              width: -moz-max-content;
+              width: -webkit-max-content;
+            }
+
+
+      .map-container{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+      }
+      .map-container iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
+    </style>
+
+      </head>
+
+        <body>
+          <header role="banner" id="fh5co-header">
+              <div class="container">
+                <!-- <div class="row"> -->
+                  <nav class="navbar navbar-default">
+                    <div class="navbar-header">
+                      <!-- Mobile Toggle Menu Button -->
+                  <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                     <a class="navbar-brand" href="index.html">SCCEd</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html" data-nav-section="home"><span>Home</span></a></li>
+                        <li><a href="#" data-nav-section="citizen science "><span>Citizen Science</span></a></li>
+                        <li class="active"><a href="#" data-nav-section="infrastructure"><span>Infrastructure</span></a></li>
+                        <li><a href="https://citisci.github.io/scced/index.html" data-nav-section="curriculum"><span>Curriculum</span></a></li>
+                        <li><a href="#" data-nav-section="about"><span>About</span></a></li>
+                        <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                <!-- </div> -->
+              </div>
+              <!--Carousel-->
+          </header>
+          <section>
+            <div>
+                  <nav class="navbar navbar-vertical-left">
+                    <ul class="nav navbar-nav">
+                      <li><a href="buildings.html">
+                          <i class="fa fa-fw fa-lg fas fa-city"></i>
+                          <span>Buildings</span>
+                        </a>
+                      </li>
+                      <li><a href="energy.html">
+                          <i class="fa fa-fw fa-lg fas fa-bolt"></i>
+                          <span>Energy</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="food.html">
+                          <i class="fa fa-fw fa-lg fa-leaf"></i>
+                          <span>Food</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="publicspace.html">
+                          <i class="fa fa-fw fa-lg fa-users"></i>
+                          <span>Public Space</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="transcom.html">
+                          <i class="fa fa-fw fa-lg fa-bus-alt"></i>
+                          <span>Trans-Com</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="wastesanitation.html">
+                          <i class="fa fa-fw fa-lg fa-users"></i>
+                          <span>Waste & San</span>
+                        </a>
+                      </li>
+                      <li><a href="water.html">
+                          <i class="fa fa-fw fa-lg fa-users"></i>
+                          <span>Water</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+          </section>
+
+          <!-- Title Page-->
+          <section class="img-1 img-1bs">
+            <h1>Building and Shelter</h1>
+          </section>
+
+      <!-- Wellbeing-->
+          <section>
+          <section class="static">
+            <div class="content">
+              <div class="row">
+                <h3></h3>
+                <div class="col-md-6">
+              <h4>We spend a lot of time indoors, perhaps too much.<br>
+              Our spaces have a big impact on our wellbeing<br>
+              Spaces designed for wellbeing have natural light, fresh air and encourage social interaction.
+            </h4>
+                <br>
+                <br><blockquote cite="www.jacn.org"> "we expect to add 2.48 trillion square feet (230 billion m2) of new floor area to the global building stock, doubling it by 2060. This is the equivalent of adding an entire New York City every month for 40 years. "<br>
+                </blockquote>
+                <p>Architecture 2030 https://architecture2030.org/buildings_problem_why/
+              </h4>
+              <p>Adapted or direct qoute from Sustainable Healthy Cities Journal Brief - 2019, No. 10 - Community Gardens and Social Benefits</p>
+            </div>
+              <div class="col-md-6">
+                <h3></h3>
+                 <div id="donutchart" style="width: 540px; height: 300px;"></div>
+                 <p>Klepeis, Neil & C. Nelson, William & Ott, Wayne & P. Robinson, John. (2001). The National Human Activity Pattern Survey (NHAPS): A Resource for Assessing Exposure to Environmental Pollutants. </p>
+              </div>
+              </div>
+          </section>
+
+            <!-- health-->
+          <section class="img-2 img-2bsh">
+            <h1>Buildings and health</h1>
+          </section>
+          <section class="static">
+            <div class="content">
+              <h3>Buildings and Health</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                <h4>Healthy buildings and shelter have non toxic building materials, are built to withstand natural disasters and are comfortable for the climate of the region<br>
+                Damp conditions, insufficient daylight, or uncomfortably cold temperatures can all effect health. The increase in extreme weather events due to climate change means more extreme hot, wet and sometimes cold weather patterns that older structures were not designed for.</h4>
+                  <br><blockquote cite="www.jacn.org"> The 1995 Chicago heat wave was a heat wave which led to 739 heat-related deaths in Chicago over a period of five days.[1] Most of the victims of the heat wave were elderly poor residents of the city, who could not afford air conditioning and did not open windows or sleep outside for fear of crime"<br>
+                  </blockquote>
+                  <p>https://en.wikipedia.org/wiki/1995_Chicago_heat_wave</p>
+              </div>
+                <div class="col-md-6">
+                  <h4>Workers and residents are at risk from toxic or hazzardous building materials. Asbestos is one type and is banned in 60 countries, but not in the US</h4>
+                  <p>Source: Asbestos.com</p>
+                  <div id="asbestos"</div>
+                </div></div>
+          </section>
+
+        <!-- Environment-->
+          <section class="img-1 img-3bse">
+            <h1>environment</h1>
+          </section>
+
+          <section class="static">
+              <div class="content">
+                <h3>Sustainanble building and re-use is criticle for now and the future.</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                <h4>Resources and energy used in the construction and mateials, keeping them warm or cool and the land used to build all create environmntal impacts.<br><br>
+                Re-using older buildings and increasing efficiency reduces GHG from daily operations and minimizes the embodied GHG production compared to a new building.<br><br> Using green roofs and vegetation to cool and insulate saves energy costs and reduces GHG emissions. Appropriate landscaping for the climate protects valuable water resources and provides habitat to improve bio-diversity.<br><br>
+                Co-locating near services and transit hubs promotes healthier lifestyles and reduces transportation impacts on the environment<h4>
+
+                <blockquote cite=http://www.2030palette.org/><h4>"Over the next 15 years, an area equal to the entire building stock of the Western Hemisphere will be redesigned, reshaped, and rebuilt.</h4>
+                </blockquote>
+                <p> Source: http://www.2030palette.org/</p>
+              </div>
+              <div class="col-md-6">
+              <h3></h3>
+             <div id="ppiechart" style="width: 900px; height: 500px;"></div
+              <p>Boyer & Ramaswami 2017, Env.Sci. Tech.</p>
+              </div>
+            </div>
+          </section>
+
+        <!-- Equity-->
+          <section class="img-4 img-4bseq ">
+            <h1>Equity</h1>
+          </section>
+          <section class="static">
+              <div class="content">
+                <div class="row">
+                  <h3>Affordable and healthy housing is distributed unequally across the metro</h3>
+                    <div class="col-md-3">
+                      <h4> Data on housing stock and affordability is available. The living conditions of residences is less understood. key home infrastructures like plumbing, heating, insulation, and cooling are part of adecuate shelter.<br>
+                      <br>Use the map on the right to compare housing quality in the metro area</p>
+                    </div>
+                  <div class="col-md-9">
+                      <iframe class="embed-responsive-item" src="https://umn.maps.arcgis.com/apps/presentation/index.html?webmap=14b5ccefc9ca4211a57ec6a202502308&slide=1" width="100%" height="400px"webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div></div></div></section>
+          <!--Notes-->
+
+
+<!--footer-->
+<footer id="footer" role="contentinfo">
+  <a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+  <div class="container">
+    <div class="">
+      <div class="col-md-12 text-center">
+        <p>&copy;</i>University of Minnesota <br>Created by Matt Vernon <a href="https://www.nsf.gov/news/news_summ.jsp?cntn_id=243312&org=NSF&from=news" target="_blank">NSF</a> </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <ul class="social social-circle">
+          <li><a href="https://www.instagram.com/scceducators/?hl=en"><i class="icon-instagram"></i></a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLbB3x0XGkuHMCvuaJZt9Hx0q1EevIxT18"><i class="icon-youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Stellar Parallax -->
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- Counters -->
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.countTodecimal.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+    <script src="js/google_map.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Main JS (Do not remove) -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
