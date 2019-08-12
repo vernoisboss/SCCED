@@ -604,6 +604,9 @@
 .green-text {
   color: #4caf50 !important; }
 
+.gold-text {
+ color: #FFD700 !important; }
+
 .rgba-green-slight,
 .rgba-green-slight:after {
   background-color: rgba(76, 175, 80, 0.1); }

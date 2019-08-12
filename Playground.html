@@ -16,21 +16,68 @@
     <link href="css/style.min.css" rel="stylesheet">
 
     <style>
-      .map-container{
-        overflow:hidden;
-        padding-bottom:56.25%;
-        position:relative;
-        height:0;
-      }
-      .map-container iframe{
-        left:0;
-        top:0;
-        height:100%;
-        width:100%;
-        position:absolute;
-      }
-    </style>
 
+    </style>
+<script> // Load Charts and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Draw the pie chart for Sarah's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawSarahChart);
+
+      // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawAnthonyChart);
+
+      // Callback that draws the pie chart for Sarah's pizza.
+      function drawSarahChart() {
+
+        // Create the data table for Sarah's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Mushrooms', 1],
+          ['Onions', 1],
+          ['Olives', 2],
+          ['Zucchini', 2],
+          ['Pepperoni', 1]
+        ]);
+
+        // Set options for Sarah's pie chart.
+        var options = {title:'How Much Pizza Sarah Ate Last Night',
+                       width:400,
+                       height:300};
+
+        // Instantiate and draw the chart for Sarah's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Sarah_chart_div'));
+        chart.draw(data, options);
+      }
+
+      // Callback that draws the pie chart for Anthony's pizza.
+      function drawAnthonyChart() {
+
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Mushrooms', 2],
+          ['Onions', 2],
+          ['Olives', 2],
+          ['Zucchini', 0],
+          ['Pepperoni', 3]
+        ]);
+
+        // Set options for Anthony's pie chart.
+        var options = {title:'How Much Pizza Anthony Ate Last Night',
+                       width:400,
+                       height:300};
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div'));
+        chart.draw(data, options);
+      }
+
+  </script>
 </head>
 
 <body>
@@ -73,7 +120,7 @@
                           <a class="nav-link waves-effect" href="wellbeing.html" target="_self">Wellbeing</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link waves-effect" href="airmonitoring.html" target="self">Air Monitoring</a>
+                          <a class="nav-link waves-effect" href="#" target="airmonitoring.html">Air Monitoring</a>
                       </li>
                   </ul>
 
@@ -133,12 +180,26 @@
 
         <!--Grid row-->
         <div class="row wow fadeIn">
-
+          <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 238px; height: auto;" data-block-id="f5fc8ca1adff3cab9c579240ecb33f45">
+              <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+                  <h1>Neighborhood Wellbeing&nbsp;</h1>
+              </div>
+          </div>
+          <div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 178px; height: 179px; left: 749px; top: 19px;" data-block-id="37cbb45fa1d8897e4ff396228bd81def">
+              <div class="sl-block-content" style="z-index: 12;">
+                  <img data-natural-width="224" data-natural-height="225" style="" data-lazy-loaded="" src="https://s3.amazonaws.com/media-p.slid.es/uploads/1007219/images/5859854/NSF_Logo.png"/>
+              </div>
+          </div>
+          <div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 200px; height: 120px; left: 40px; top: 48px;" data-block-id="5db9180e50268e32ed9f7e2f6628a107">
+              <div class="sl-block-content" style="z-index: 13;">
+                  <img data-natural-width="200" data-natural-height="120" style="" data-lazy-loaded="" src="https://s3.amazonaws.com/media-p.slid.es/uploads/1007219/images/5859859/200px-Minnesota_Golden_Gophers_logo.svg.png"/>
+              </div>
+          </div>
           <!--What is citizen science video-->
-          <div class="col-md-6 mb-4">
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WW0ZHAeO0tU?start=95" allowfullscreen></iframe>
+              <iframe class="embed-responsive-item" src="https://arcg.is/08y9iu" allowfullscreen></iframe>
             </div>
+            <!-- Responsive iFrame -->
           </div>
 
           <!--Activites-->
@@ -186,7 +247,7 @@
             <div class="col-md-6 mb-4">
               <!-- Arc GIS Map -->
               <!--Grid column-->
-           <a href= "http://umn.maps.arcgis.com/apps/View/index.html?appid=27a25bc98f794f9faa2e4b0b3f0baf18" target="_blank"><img src="img/schools.png" class="img-fluid z-depth-1-half" alt=""></a>
+           <a href= "https://arcg.is/1O81Ln" target="_blank"><img src="img/schools.png" class="img-fluid z-depth-1-half" alt=""></a>
             </div>
 
             <div class="col-md-6 mb-4">
@@ -203,9 +264,35 @@
 
             </div>
          </div>
-        </section>
+         <!-- slide show-->
+         <div class="row">
+           div class="container">
+         </section>
+    <section>
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col-8">
+      2 of 3 (wider)
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://slides.com/matthewvernon/deck-2/embed?byline=hidden" width="736" height="424" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col">
+      3 of 3
+    </div>
+  </div>
+</section>
           <!--end section-->
+          <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/6ec5c6d1f85f4f26836b0afafcd3904f/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
+          <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+              <a href="https://sketchfab.com/3d-models/new-qlon-6ec5c6d1f85f4f26836b0afafcd3904f?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">New Qlon</a>
+              by <a href="https://sketchfab.com/verno056?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Vernon</a>
+              on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+          </p>
+          </div>
           <!--section-->
           <section class="mt-5 wow fadeIn">
             <!-- Main heading -->
@@ -218,19 +305,29 @@
                   <h5 class="feature-title">Learn more about your research team and ask a question using flip grid.</h5>
                   <a href= "https://flipgrid.com/398077" target="_blank"><img src="img/flipgridcta.png" align="middle" height="200" width="200" alt="Picture of a qustion Mark with pictures of U of M S&CC grant researchers"></img></a>
                 </div>
-
-                <div class="col-md-6 mb-4">
-                  <h5 class="feature-title">Share your discoveries and connect with others using the hahtag #scced</h5>
-                  <a href="" target="_blank">
-                      <i class="fa fa-instagram fa-3x gold-text"></i>
-                  </a>
-
-                  <a href="" target="_blank">
-                      <i class="fa fa-twitter fa-3x maroon-text" ></i>
-                  </a>
-                </div>
               </div>
+
+              <section class="mt-5 wow fadeIn">
+                  <div class="row">
+
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://arcg.is/5Dyb9" width="800" height="450" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></iframe>
+                      </div>
+                    </div>
+
           </section>
+<section class="col-md-12">
+  <div class="row">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+       <!--Table and divs that hold the pie charts-->
+    <table class="columns">
+      <tr>
+        <td><div id="Sarah_chart_div" style="border: 1px solid #ccc"></div></td>
+        <td><div id="Anthony_chart_div" style="border: 1px solid #ccc"></div></td>
+      </tr>
+    </table>
+  </div>
+</section>
   </main>
   <!--Main layout-->
 
